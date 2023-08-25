@@ -53,7 +53,7 @@
         <tr>
           <% @book.book_comments.each do |book_comment| %>
           <td>
-            <p><%= image_tag book_comment.user.get_profile_image(100,100) %></p>
+            <%= image_tag book_comment.user.get_profile_image(100,100) %>
           </td>
           <td>
             <%= book_comment.comment %>
