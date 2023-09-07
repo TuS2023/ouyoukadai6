@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :rooms, through: :entries
 
+  has_many :group_users, dependent: :destroy
+
   has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   has_many :followings, through: :relationships, source: :followed
 
