@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     def index
       @book = Book.new
       @groups = Group.all
-      @user = User.fin(current_user.id)
+      @user = User.find(current_user.id)
     end
 
     def show
