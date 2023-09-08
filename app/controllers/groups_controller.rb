@@ -13,6 +13,8 @@ class GroupsController < ApplicationController
       @group = Group.find(params[:id])
       @user = User.find(params[:id])
     end
+    
+    
 
     def new
       @group = Group.new
