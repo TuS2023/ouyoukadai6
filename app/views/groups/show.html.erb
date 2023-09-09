@@ -16,6 +16,7 @@
             <th>グループ名</th>
             <th>紹介文</th>
             <th>メンバー</th>
+            <th></th>
             <th colspan="3"></th>
           </tr>
         </thead>
@@ -44,6 +45,7 @@
               　<%= link_to 'Join this group', group_group_users_path(@group), method: :post, class: "btn btn-sm btn-success" %>
               <% end %>
             </td>
+            <td><%= link_to 'Notice an Event',group_new_mail_path(@group), class: "btn btn-sm btn-info" %></td>
           </tr>
         </tbody>
       </table>
