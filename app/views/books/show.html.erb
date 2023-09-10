@@ -23,6 +23,7 @@
           </td>
 
           <td>コメント数：<%= @book.book_comments.count %></td>
+          <td><%= render "books/static_rate", book: @book %></td>
           <td><p class="view-count">閲覧数: <%= @book_detail.view_counts.count %></p></td>
           <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book.id), class: "btn btn-sm btn-success" %></td>
